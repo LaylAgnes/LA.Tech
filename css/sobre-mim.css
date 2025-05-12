@@ -136,7 +136,7 @@ main.container {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #0391f4ff; /* mesma cor do cabeçalho */
+    background-color: #15304bff; /* mesma cor do cabeçalho */
   }
 
   header nav {
