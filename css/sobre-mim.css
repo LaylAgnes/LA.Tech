@@ -94,7 +94,8 @@ footer .rodape-grid {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  max-width: 1000px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
 }
 
@@ -126,20 +127,29 @@ main.container {
   margin-top: 60px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
 }
 
+
 @media (max-width: 768px) {
   header {
-    height: auto; /* Ajusta a altura do cabeçalho */
-    position: relative; /* Muda para relative para não cobrir o conteúdo */
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0391f4ff; /* mesma cor do cabeçalho */
   }
-  
-  body {
-    padding-top: 60px; /* Ajusta o espaço para o cabeçalho fixo */
-  }
-  
+
   header nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .Logo {
+    width: 100%;
+    text-align: center;
   }
 
   .Logo h1 {
@@ -148,13 +158,20 @@ main.container {
 
   #menu {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     gap: 0.5rem;
+  }
+
+  #menu li {
+    width: 100%;
+    text-align: center;
   }
 
   .container {
     padding: 1rem 0.8rem;
     margin: 1rem auto;
+    margin-top: 120px; /* espaço para o header fixo */
   }
 
   .container h1 {
@@ -174,7 +191,7 @@ main.container {
 
   footer .rodape-grid div {
     min-width: auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
 
@@ -186,3 +203,4 @@ main.container {
     padding: 1rem;
   }
 }
+
