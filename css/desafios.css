@@ -7,22 +7,24 @@ body {
 }
 
 header {
+  position: fixed;         /* Fixar no canto da tela */
+  top: 20px;               /* Distância do topo */
+  left: 20px;              /* Distância da esquerda */
   background-color: #15304bff;
   color: white;
-  text-align: center;
-  padding:5px 75px;
+  padding: 15px 20px;
   margin: 0;
-  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  width: auto;
 }
 
 header nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Deixa logo em cima e menu embaixo */
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 ;
-  color: white;
+  gap: 15px;
 }
 
 .Logo {
@@ -35,15 +37,17 @@ header nav {
 
 .Logo h1 {
   font-size: 25px;
-  margin: 10px;
+  margin: 0;
 }
 
 #menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  padding:0;
+  flex-direction: column; /* Menu na vertical */
+  gap: 1rem;
+  padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 #menu li a {
@@ -56,6 +60,7 @@ header nav {
 #menu li a:hover {
   color: #00bfff;
 }
+
 
 .container {
   max-width: 1200px;
