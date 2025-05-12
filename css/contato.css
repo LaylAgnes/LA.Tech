@@ -82,6 +82,16 @@ header nav {
   font-size: 18px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 footer.rodape {
   background-color: #15304bff;
   color: white;
