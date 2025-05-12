@@ -8,10 +8,10 @@ body {
 }
 
 header {
-  position: fixed; /* fixa no topo */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* ocupa toda a largura */
+  width: 100%; 
   background-color: #15304bff;
   color: white;
   padding: 10px 40px;
@@ -22,7 +22,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between; /* logo na esquerda, menu na direita */
+  justify-content: space-between; 
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
@@ -58,7 +58,6 @@ header nav {
 #menu li a:hover {
   color: #00bfff;
 }
-
 
 .container {
   max-width: 1200px;
@@ -159,4 +158,56 @@ main.container {
   margin: 2rem auto;
   padding: 1rem;
   flex: 1;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .Logo h1 {
+    font-size: 20px;
+  }
+
+  #menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem 0.8rem;
+    margin: 1rem auto;
+  }
+
+  .container h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .container p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  footer .rodape-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .rodape-grid div {
+    min-width: auto;
+    width: 90%;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
+  }
 }
