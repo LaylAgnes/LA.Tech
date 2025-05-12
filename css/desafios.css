@@ -224,7 +224,7 @@ main.container {
   margin: 2rem auto;
   padding: 1rem;
   flex: 1;
-  margin-top: 100px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
+  margin-top: 150px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
 }
 
 
