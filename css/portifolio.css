@@ -52,6 +52,7 @@ header nav {
   gap: 1.5rem;
   padding: 0;
   margin: 0;
+  transform: translateX(-50px);
 }
 
 #menu li a {
@@ -210,7 +211,7 @@ main.container {
     gap: 0.5rem;
     padding: 0;
     margin: 0;
-    transform: translateX(-50px);
+    
   }
 
   #menu li {
