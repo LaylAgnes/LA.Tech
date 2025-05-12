@@ -128,6 +128,10 @@ main.container {
 }
 
 @media (max-width: 768px) {
+   body {
+    padding-top: 100px; /* ou ajuste para 80px, 120px, conforme a altura real do seu header */
+  }
+
   header {
     height: auto;
     position: fixed;
@@ -181,6 +185,7 @@ main.container {
   .container p {
     font-size: 16px;
     text-align: justify;
+    text-decoration: none;
   }
 
   footer .rodape-grid {
