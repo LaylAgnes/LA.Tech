@@ -130,8 +130,8 @@ main.container {
 
 
 @media (max-width: 768px) {
-   body {
-    padding-top: 100px; /* ou ajuste para 80px, 120px, conforme a altura real do seu header */
+  body {
+    padding-top: 100px; /* Ajuste para a altura do cabeçalho */
   }
   
   header {
@@ -142,6 +142,7 @@ main.container {
     width: 100%;
     z-index: 1000;
     background-color: #15304bff; /* mesma cor do cabeçalho */
+    padding: 10px;
   }
 
   header nav {
@@ -150,6 +151,7 @@ main.container {
     justify-content: center;
     gap: 10px;
     padding: 10px 20px;
+    width: 100%;
   }
 
   .Logo {
@@ -166,13 +168,14 @@ main.container {
     align-items: center;
     width: 100%;
     gap: 0.5rem;
+    padding: 0;
+    margin: 0;
   }
 
   #menu li {
     width: 100%;
     text-align: center;
   }
-
   main.container {
   max-width: 1200px;
   margin: 2rem auto;
