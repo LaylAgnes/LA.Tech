@@ -15,32 +15,31 @@ body {
 
 
 header {
-  position: fixed;         /* Fixar no canto da tela */
-  top: 20px;               /* Distância do topo */
-  left: 20px;              /* Distância da esquerda */
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* ocupa toda a largura */
   background-color: #15304bff;
   color: white;
-  padding: 15px 20px;
+  padding: 10px 40px;
   margin: 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  width: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
   display: flex;
-  flex-direction: column; /* Deixa logo em cima e menu embaixo */
+  justify-content: space-between; /* logo na esquerda, menu na direita */
   align-items: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0;
-  margin: 0;
 }
 
 .Logo h1 {
@@ -51,11 +50,9 @@ header nav {
 #menu {
   list-style: none;
   display: flex;
-  flex-direction: column; /* Menu na vertical */
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
 #menu li a {
