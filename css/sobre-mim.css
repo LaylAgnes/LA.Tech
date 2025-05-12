@@ -147,7 +147,7 @@ main.container {
 
   header nav {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 10px 20px;
@@ -165,17 +165,16 @@ main.container {
 
   #menu {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     gap: 0.5rem;
     padding: 0;
     margin: 0;
-    
   }
 
   #menu li {
     width: 100%;
-    text-align: right;
+    text-align: center;
   }
 
   main.container {
