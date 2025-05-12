@@ -223,6 +223,7 @@ main.container {
     padding: 1rem 0.8rem;
     margin: 1rem auto;
     margin-top: 120px; /* espaço para o header fixo */
+    
   }
 
   .container h1 {
