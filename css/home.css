@@ -53,6 +53,7 @@ header nav {
   gap: 1.5rem;
   padding: 0;
   margin: 0;
+  padding-right: 30px;
 }
 
 #menu li a {
@@ -176,7 +177,7 @@ main.container {
     width: 100%;
     text-align: right;
   }
-  
+
   main.container {
   max-width: 1200px;
   margin: 2rem auto;
