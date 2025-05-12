@@ -219,12 +219,14 @@ main.container {
     text-align: center;
   }
 
-  .container {
-    padding: 1rem 0.8rem;
-    margin: 1rem auto;
-    margin-top: 120px; /* espaço para o header fixo */
-    
-  }
+  main.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  flex: 1;
+  margin-top: 100px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
+}
+
 
   .container h1 {
     font-size: 22px;
