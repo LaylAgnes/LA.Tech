@@ -156,17 +156,17 @@ main.container {
   }
 
   header nav {
-    flex-direction: column;
+    flex-direction: row; /* Alinhar os itens do menu lado a lado */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Distribuir o espaço entre os itens */
     gap: 10px;
     padding: 10px 20px;
     width: 100%;
   }
 
   .Logo {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    text-align: left; /* Ajustar a logo para a esquerda */
   }
 
   .Logo h1 {
@@ -174,28 +174,36 @@ main.container {
   }
 
   #menu {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 0;
+    display: flex; /* Certifique-se de que o menu será flexível */
+    flex-direction: row; /* Alinha os itens do menu lado a lado */
+    gap: 20px; /* Espaçamento entre os itens */
     margin: 0;
-    
+    padding: 0;
   }
 
   #menu li {
-    width: 100%;
+    list-style: none;
     text-align: center;
   }
 
-  main.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
-  flex: 1;
-  margin-top: 150px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
-}
+  #menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
 
+  #menu li a:hover {
+    color: #00bfff;
+  }
+
+  main.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    flex: 1;
+    margin-top: 150px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
+  }
 
   .container h1 {
     font-size: 22px;
