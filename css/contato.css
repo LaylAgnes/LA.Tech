@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1f4469ff;
   color: #333;
-  padding-top: 100px;
+  padding-top: 100px; /* Ajuste para garantir espaço no topo devido ao cabeçalho fixo */
 }
 
 header {
@@ -24,6 +24,7 @@ header {
   margin: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  height: 60px; /* Garantir altura fixa para o cabeçalho */
 }
 
 header nav {
@@ -72,58 +73,49 @@ header nav {
 }
 
 .container h1 {
- color: white;
- font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
 
 .container p {
- color: white;
- font-size: 18px;
-}
-
-.contato a {
   color: white;
-  text-decoration: none;
-}
-
-.contato a:hover {
-  text-decoration: underline;
+  font-size: 18px;
 }
 
 footer.rodape {
- background-color: #15304bff;
- color: white;
- padding: 20px 0;
- text-align: center;
+  background-color: #15304bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 footer .rodape-grid {
- display: flex;
- flex-wrap: wrap;
- gap: 20px;
- justify-content: center;
- max-width: 1000px;
- margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 footer .rodape-grid div {
- flex: 1;
- min-width: 200px;
+  flex: 1;
+  min-width: 200px;
 }
 
 footer p {
-    margin: 5px 0;
-    font-size: 16px;
+  margin: 5px 0;
+  font-size: 16px;
 }
 
 footer p a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-footer p a:hover{
-    text-decoration: underline;
+footer p a:hover {
+  text-decoration: underline;
 }
 
 main.container {
@@ -131,12 +123,17 @@ main.container {
   margin: 2rem auto;
   padding: 1rem;
   flex: 1;
+  margin-top: 60px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
 }
 
 @media (max-width: 768px) {
-   header {
-    height: auto; /* Ajustar altura */
-    position: relative; /* Mudar para relative para não cobrir o conteúdo */
+  header {
+    height: auto; /* Ajusta a altura do cabeçalho */
+    position: relative; /* Muda para relative para não cobrir o conteúdo */
+  }
+  
+  body {
+    padding-top: 60px; /* Ajusta o espaço para o cabeçalho fixo */
   }
   
   header nav {
