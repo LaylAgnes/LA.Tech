@@ -213,7 +213,7 @@ main.container {
   #menu {
     display: flex; /* Certifique-se de que o menu será flexível */
     flex-direction: row; /* Alinha os itens do menu lado a lado */
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
     margin: 0;
     padding: 0;
   }
