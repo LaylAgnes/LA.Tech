@@ -78,9 +78,10 @@ header nav {
   font-size: 30px;
 }
 
-.container p {
+.container p, a {
   color: white;
   font-size: 18px;
+  text-decoration: none;
 }
 
 footer.rodape {
