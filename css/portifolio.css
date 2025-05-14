@@ -189,7 +189,7 @@ main.container {
     flex-direction: row; /* Alinhar os itens do menu lado a lado */
     align-items: center;
     justify-content: space-between; /* Distribuir o espaço entre os itens */
-    gap: 10px;
+    gap: 5px;
     padding: 10px 20px;
     width: 100%;
   }
