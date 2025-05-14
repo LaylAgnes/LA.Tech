@@ -20,7 +20,6 @@ header {
   width: 100%; 
   background-color: #15304bff;
   color: white;
-  padding: 10px 40px;
   margin: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -34,6 +33,7 @@ header nav {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 10px 40px;
 }
 
 .Logo {
@@ -83,16 +83,6 @@ header nav {
   font-size: 18px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
 footer.rodape {
   background-color: #15304bff;
   color: white;
@@ -137,6 +127,7 @@ main.container {
   flex: 1;
   margin-top: 100px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
 }
+
 
 @media (max-width: 768px) {
   body {
@@ -223,13 +214,5 @@ main.container {
     min-width: auto;
     width: 100%;
     text-align: center;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 1rem;
   }
 }
