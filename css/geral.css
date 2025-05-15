@@ -1,68 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* altura mínima da tela */
   background-color: #1f4469ff;
-  color: #333;
-  margin: 0;
-  padding-top: 100px; /* Garantir o espaçamento do conteúdo abaixo do cabeçalho fixo */
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #15304bff;
   color: white;
-  margin: 0;
-  z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  height: 80px; /* Altura fixa para o cabeçalho */
 }
 
-header nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 40px;
+  background-color: #15304bff;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
 }
 
-.Logo {
+nav .Logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.Logo h1 {
+nav .Logo h1 {
   font-size: 25px;
   margin: 0;
 }
 
-#menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
+nav .menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-#menu li a {
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 0.5rem 0;
 }
 
-#menu li a:hover {
-  color: #00bfff;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -77,15 +82,20 @@ header nav {
   font-size: 24px;
 }
 
-.container p {
+.container p, a{
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  list-style: none;
+  text-decoration: none;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px; /* para não esticar demais */
+  margin: 0 auto;
 }
 
 .card {
@@ -154,6 +164,7 @@ footer p a {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  list-style: none;
 }
 
 footer p a:hover {
@@ -161,37 +172,42 @@ footer p a:hover {
 }
 
 main.container {
+  flex: 1;  /* faz o main crescer e ocupar espaço restante */
   max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem;
-  flex: 1;
-  margin-top: 100px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
+  margin-top: 100px; /* ajuste para seu header fixo */
 }
 
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  body {
-    padding-top: 100px; /* Ajuste para a altura do cabeçalho */
+
+  nav .menu-toggle {
+    display: block;
+    position: relative;  /* mantém a posição */
+    z-index: 1100;       /* garante que fique acima do menu */
   }
   
-  header {
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #15304bff; /* mesma cor do cabeçalho */
-    padding: 10px;
+   nav ul {
+  display: none;
+  flex-direction: column;
+  background-color: #15304bff;
+  width: 100%;
+  position: absolute;
+  top:1px; /* altura do cabeçalho para colar o menu abaixo */
+  left: 0;
+  z-index: 1000;
+  margin: 0; /* remove espaço indesejado */
+  padding: 10px 0;
+}
+
+  nav ul.show {
+    display: flex;
   }
 
-  header nav {
-    flex-direction: row; /* Alinhar os itens do menu lado a lado */
-    align-items: center;
-    justify-content: space-between; /* Distribuir o espaço entre os itens */
-    gap: 5px;
-    padding: 10px 20px;
-    width: 100%;
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
   }
 
   .Logo {
@@ -203,36 +219,12 @@ main.container {
     font-size: 20px;
   }
 
-  #menu {
-    display: flex; /* Certifique-se de que o menu será flexível */
-    flex-direction: row; /* Alinha os itens do menu lado a lado */
-    gap: 10px; /* Espaçamento entre os itens */
-    margin: 0;
-    padding: 0;
-  }
-
-  #menu li {
-    list-style: none;
-    text-align: center;
-  }
-
-  #menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-
-  #menu li a:hover {
-    color: #00bfff;
-  }
-
   main.container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
     flex: 1;
-    margin-top: 150px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
+    margin-top: 10px; /* Adiciona margem superior para não sobrepor o cabeçalho fixo */
   }
 
   .container h1 {
