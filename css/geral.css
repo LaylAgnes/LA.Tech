@@ -81,6 +81,11 @@ nav ul li a:hover {
   font-size: 24px;
 }
 
+.container h2 {
+  color: white;
+  font-size: 22px;
+}
+
 .container p, a{
   color: white;
   font-size: 18px;
